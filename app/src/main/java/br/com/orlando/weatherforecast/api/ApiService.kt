@@ -7,7 +7,7 @@ object ApiService {
 
     private fun getRetrofit() : Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://openweathermap.org/data/2.5/weather/")
+            .baseUrl("http://openweathermap.org/data/2.5/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
