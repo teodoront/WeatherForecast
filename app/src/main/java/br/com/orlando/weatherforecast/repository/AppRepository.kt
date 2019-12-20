@@ -2,6 +2,7 @@ package br.com.orlando.weatherforecast.repository
 
 import android.content.Context
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import br.com.orlando.weatherforecast.api.ApiService
 import br.com.orlando.weatherforecast.returnApi.WeatherResponse
 import retrofit2.Call
@@ -10,6 +11,8 @@ import retrofit2.Response
 
 
 class AppRepository (){
+
+var listWeather = MutableLiveData<WeatherResponse>()
 
  fun getWheather(nameCity:String){
 
@@ -21,7 +24,7 @@ class AppRepository (){
          }
 
          override fun onResponse(call: Call<WeatherResponse>, response: Response<WeatherResponse>) {
-             var response = response.body()
+             listWeather.value = response.body()
          }
      })
  }

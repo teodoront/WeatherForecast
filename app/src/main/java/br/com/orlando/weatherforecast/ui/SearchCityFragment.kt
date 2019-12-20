@@ -13,7 +13,7 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 
 class SearchCityFragment : Fragment() {
 
-    var appRepository = AppRepository()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,8 +29,6 @@ class SearchCityFragment : Fragment() {
         super.onResume()
 
         btnSearch.setOnClickListener{
-
-            appRepository.getWheather(inputNameCity.text.toString())
 
             it.findNavController().navigate(R.id.action_searchCityFragment_to_searchResult)
         }

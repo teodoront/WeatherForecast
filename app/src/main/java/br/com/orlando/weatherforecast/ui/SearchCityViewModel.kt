@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
 import br.com.orlando.weatherforecast.repository.AppRepository
 
-class SearchCityViewModel(application: Application) : AndroidViewModel(application) {
+class SearchCityViewModel() {
 
+     var repository = AppRepository()
 
+    fun getListWeather()= repository.listWeather
 }
 
