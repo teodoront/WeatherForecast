@@ -1,8 +1,19 @@
 package br.com.orlando.weatherforecast.ui
 
+import android.os.Bundle
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import br.com.orlando.weatherforecast.returnApi.WeatherResponse
 
 class SearchResult : Fragment() {
 
-    lateinit var viewModel: SearchCityViewModel
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+
+
+
+    }
 }
